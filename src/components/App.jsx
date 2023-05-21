@@ -8,32 +8,38 @@ import { Filter } from './Filter/Filter';
 export class App extends React.Component {
   state = {
     contacts: [
-      { id: 'id-0', name: 'Marko', number: '234345345' },
-      { id: 'id-1', name: 'Olena', number: '56456342' },
-      { id: 'id-2', name: 'Sasha', number: '54645643' },
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
   };
+
   addContact = data => {
     const { contacts } = this.state;
     const newContact = {
       id: nanoid(),
       ...data,
     };
+
     contacts.some(({ name }) => name === data.name)
       ? alert(`${data.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [...prevState.contacts, newContact],
         }));
   };
+
   deleteContact = userId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== userId),
     }));
   };
+
   handleChangeFilter = ({ currentTarget: { value } }) => {
     this.setState({ filter: value });
   };
+
   getFilterContacts = () => {
     const { filter, contacts } = this.state;
     const FilterlowerCase = filter.toLowerCase();
@@ -44,6 +50,7 @@ export class App extends React.Component {
 
   render() {
     const { filter } = this.state;
+
     return (
       <>
         <Section title="Phonebook">

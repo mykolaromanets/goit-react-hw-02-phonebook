@@ -11,7 +11,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #3f3f3f;
-  text-transform: uppercase;
+
   letter-spacing: 0.5px;
   line-height: 1.2;
 }
@@ -21,7 +21,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #3f3f3f;
-  text-transform: uppercase;
+
   letter-spacing: 0.5px;
   line-height: 1.2;
   vertical-align: middle;
@@ -35,7 +35,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #3f3f3f;
-  text-transform: uppercase;
+
   letter-spacing: 0.5px;
   line-height: 1.2;
   cursor: pointer;

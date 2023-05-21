@@ -1,7 +1,7 @@
-import { Component } from 'react';
-import './ContactForm-styled.css'
+import React from 'react';
+import './ContactForm-styled.css';
 
-export class ContactForm extends Component {
+export class ContactForm extends React.Component {
   state = {
     name: '',
     number: '',
@@ -58,11 +58,7 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <button
-          type="submit"
-          className="Form__btn__styled"
-          disabled={!name || !number}
-        >
+        <button type="submit" className="Form__btn__styled">
           Add contact
         </button>
       </form>
